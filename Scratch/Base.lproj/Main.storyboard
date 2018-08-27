@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
         <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -791,19 +791,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="400" height="146"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i9C-C1-6sS">
-                                <rect key="frame" x="18" y="110" width="131" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="Sync using iCloud" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Df6-W4-NIV">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="CloudSettingChanged:" target="syf-mh-xmZ" id="k0Q-Zx-nMr"/>
-                                </connections>
-                            </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sy4-H8-ekq">
-                                <rect key="frame" x="18" y="90" width="148" height="18"/>
+                                <rect key="frame" x="18" y="110" width="148" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Use monospace font" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="ZYw-UI-dGA">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -814,7 +803,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fsz-CZ-4jy">
-                                <rect key="frame" x="18" y="70" width="114" height="18"/>
+                                <rect key="frame" x="18" y="90" width="114" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Allow Rich Text" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Qq0-bP-hbp">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -824,11 +813,19 @@
                                     <action selector="richTextSettingChanged:" target="syf-mh-xmZ" id="hWG-1w-OyB"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NXf-H8-mch">
+                                <rect key="frame" x="18" y="20" width="301" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Keyboard shortcut: Control, Option, Command, S" id="rmF-bv-nBZ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="allowRichTextCheck" destination="Fsz-CZ-4jy" id="DgM-OV-5g8"/>
-                        <outlet property="syncUsingCloudCheck" destination="i9C-C1-6sS" id="F1y-BF-UOV"/>
                         <outlet property="useMonoSpaceCheck" destination="sy4-H8-ekq" id="jl7-Vz-9VC"/>
                     </connections>
                 </viewController>
@@ -837,6 +834,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="settings" width="256" height="256"/>
+        <image name="settings" width="128" height="128"/>
     </resources>
 </document>
