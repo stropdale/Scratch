@@ -11,7 +11,11 @@ import Cocoa
 class CurrentNoteViewController: NSViewController {
 
     @IBOutlet private weak var settingsButton: NSButton!
-    @IBOutlet private var textView: NSTextView!
+    @IBOutlet private weak var shareButton: NSButton!
+    @IBOutlet private weak var textView: NSTextView!
+    
+    private var deletedText: String?
+    
     let documentManager = DocumentPerisistanceManager.shared
     
     lazy var preferencesWindowController: PreferencesWindowController = {
@@ -22,7 +26,9 @@ class CurrentNoteViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        shareButton.sendAction(on: .leftMouseDown)
         setupTextView()
+    
         NotificationCenter.default.addObserver(self, selector: #selector(prefsDidChange), name: Notification.Name.preferencesChanged, object: nil)
     }
     
@@ -74,6 +80,21 @@ class CurrentNoteViewController: NSViewController {
         }
     }
     
+    @IBAction func clearDocumentContents(_ sender: Any) {
+        if textView.string.isEmpty {
+            guard let deletedText = deletedText else {
+                textView.string = "Nothing to restore. Tap this button once to delete the document. Tap it again if you made a mistake to restore the document"
+                return
+            }
+            
+            textView.string = deletedText
+            return
+        }
+        
+        deletedText = textView.string
+        textView.string = ""
+    }
+    
     @objc private func showPreferences() {
         preferencesWindowController.showWindow(self)
     }
@@ -103,8 +124,59 @@ extension CurrentNoteViewController: NSTextViewDelegate {
     }
 }
 
+// MARK: Sharing
+
 extension CurrentNoteViewController {
-    // MARK: Storyboard instantiation
+    @IBAction func shareTapped(_ sender: NSButton) {
+        let textToShare = getTextToShare()
+        
+        let sharingPicker = NSSharingServicePicker(items: [textToShare])
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now(), execute: {
+            sharingPicker.show(relativeTo: NSZeroRect, of: sender, preferredEdge: .minY)
+        })
+    }
+    
+    @IBAction func copyTapped(_ sender: NSButton) {
+        NSPasteboard.general.clearContents()
+        NSPasteboard.general.writeObjects([getTextToShare() as NSPasteboardWriting])
+    }
+    
+    
+    /// If no text is selected then returns all text. If text is selected, only the selected text is returned
+    ///
+    /// - Returns: String
+    private func getTextToShare() -> String {
+        let ranges = textView.selectedRanges
+        var textSelections = String()
+        
+        for val in ranges {
+            if val is NSRange {
+               let range = val as! NSRange
+                if range.length != 0 {
+                    let text = textView.string
+                    let indexStartOfText = text.index(text.startIndex, offsetBy: range.location)
+                    let indexEndOfText = text.index(text.startIndex, offsetBy: range.location + range.length)
+                    
+                    let substring = text[indexStartOfText..<indexEndOfText]
+                    textSelections.append(String(substring))
+                    textSelections.append("\n")
+                }
+            }
+        }
+        
+        if textSelections.isEmpty {
+            return textView.string
+        }
+        
+        return textSelections
+    }
+}
+
+// MARK: Storyboard instantiation
+
+extension CurrentNoteViewController {
+    
     static func newCurrentNoteController() -> CurrentNoteViewController {
         let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
         let identifier = NSStoryboard.SceneIdentifier(rawValue: "CurrentNoteViewController")
