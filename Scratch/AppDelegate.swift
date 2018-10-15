@@ -8,6 +8,9 @@
 
 import Cocoa
 import HotKey
+import Fabric
+import Crashlytics
+
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -18,6 +21,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let hotKey = HotKey(key: .s, modifiers: [.control, .option, .command]) // Setup hot key for ⌥⌘S
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        UserDefaults.standard.register(defaults: ["NSApplicationCrashOnExceptions": true])
+        Fabric.with([Crashlytics.self])
+
 
         setupStatusBarButton()
         setupClickEventMonitor()

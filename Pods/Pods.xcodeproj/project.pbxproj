@@ -9,19 +9,19 @@
 /* Begin PBXBuildFile section */
 		17590BD39B93D61500318B6609CB1A31 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0C5FD3B4DBF1E42EBF1E6C1EAFD243 /* Cocoa.framework */; };
 		2F79B4CA61D7D77DDA8B9E2A5D51C2F5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0C5FD3B4DBF1E42EBF1E6C1EAFD243 /* Cocoa.framework */; };
-		376600012D78BBD1A6A1350E2C0E1763 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D932BA03EC0EEBB5D784A0A1A430656 /* Key.swift */; };
-		401C3D04D259233BEAB50F753F44EF54 /* HotKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26934BD6BC0B65D4E808B922A0F1E543 /* HotKey.swift */; };
-		4F05668B9EB744A2EA80944CD56D6FD9 /* KeyCombo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07CFD521DA671921D73AA482491B21C /* KeyCombo.swift */; };
+		376600012D78BBD1A6A1350E2C0E1763 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704E7BBB2B1D2795794B130AD416A2EA /* Key.swift */; };
+		401C3D04D259233BEAB50F753F44EF54 /* HotKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E21F9F8E4A3C8BFF4B9A9CF83B5AEF /* HotKey.swift */; };
+		4F05668B9EB744A2EA80944CD56D6FD9 /* KeyCombo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC6AD2D9BA2AD45BC32F7E64D191662 /* KeyCombo.swift */; };
 		583887985D567BD5CAE358F2D637C089 /* Appkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C035145C822CCF7AB16AB4758080D4 /* Appkit.framework */; };
-		5FDD26A50E274A822DB8D0E12F973D3E /* HotKey-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CBE64C502A8AA45CCE99809EEB002C /* HotKey-dummy.m */; };
+		5FDD26A50E274A822DB8D0E12F973D3E /* HotKey-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B87E531670FE5F2CEDAEFFAE57A1A528 /* HotKey-dummy.m */; };
 		6CEEDE4CF8AE7642206515FD1E2E5B93 /* Pods-Scratch-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B9784F5F663ACDFF4F3C0536271C53A8 /* Pods-Scratch-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		844DE116417D4982299C43260D63F0DF /* Pods-ScratchTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 105159115B51B498F7F705237D9EE6B9 /* Pods-ScratchTests-dummy.m */; };
 		A40ED70F2455FF9895E7831B4753F457 /* Pods-ScratchTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FE6C031B0B85089EFB34BE335C1E9F3 /* Pods-ScratchTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B2B564B05E8517BC5CE69E79EB96C50B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0C5FD3B4DBF1E42EBF1E6C1EAFD243 /* Cocoa.framework */; };
-		B401867272D84298ED1281CD038DACD2 /* HotKeysController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CAC9DABE04E0493AC7084B80B4FFEF /* HotKeysController.swift */; };
+		B401867272D84298ED1281CD038DACD2 /* HotKeysController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F92D417497547F3DC5C09B54477C37 /* HotKeysController.swift */; };
 		D4857AC195C5F7B6CE3F29550F055FA7 /* Pods-Scratch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFD4FA5060601FA949EB5C59F81849C /* Pods-Scratch-dummy.m */; };
-		E0E5B9A249DABC6DC93A498FC5FB12B3 /* NSEventModifierFlags+HotKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDBFC39A102F89D13F7659FEB469FDD /* NSEventModifierFlags+HotKey.swift */; };
-		E7E905CEE708C219A30A8B214D467482 /* HotKey-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F5E15B714AEE690F3EE615A79EB09011 /* HotKey-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0E5B9A249DABC6DC93A498FC5FB12B3 /* NSEventModifierFlags+HotKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1296D041223B5CCD8D7FF1B10E4D6 /* NSEventModifierFlags+HotKey.swift */; };
+		E7E905CEE708C219A30A8B214D467482 /* HotKey-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 26E588EF2DBA6FDADDDE4C8EAD9A8398 /* HotKey-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF966CE68AF05F0AD141AAA169908C85 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EBB4C83DD47FF9510B7C7786633F64 /* Carbon.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,40 +37,51 @@
 
 /* Begin PBXFileReference section */
 		011DFFE96C7678D62B1A6A106E5F925A /* HotKey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HotKey.framework; path = HotKey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0759573E7B674B9334520C909AA90EF4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08D2ED308B0B50657129256790358938 /* Pods-ScratchTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ScratchTests-resources.sh"; sourceTree = "<group>"; };
 		0AA8AA524CB0AC919819E47F3CD4036E /* Pods-Scratch-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Scratch-resources.sh"; sourceTree = "<group>"; };
+		0DA862B883F924269A059D1EA5AE037A /* HotKey.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HotKey.xcconfig; sourceTree = "<group>"; };
 		105159115B51B498F7F705237D9EE6B9 /* Pods-ScratchTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ScratchTests-dummy.m"; sourceTree = "<group>"; };
-		1C477D06E8966A43AD82A480A99C7314 /* HotKey.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HotKey.xcconfig; sourceTree = "<group>"; };
-		26934BD6BC0B65D4E808B922A0F1E543 /* HotKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HotKey.swift; path = Sources/HotKey/HotKey.swift; sourceTree = "<group>"; };
+		13552B95BEB6CAB2EA2DB3DA8254B1EF /* ANSCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANSCompatibility.h; path = OSX/Crashlytics.framework/Versions/A/Headers/ANSCompatibility.h; sourceTree = "<group>"; };
+		15F92D417497547F3DC5C09B54477C37 /* HotKeysController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HotKeysController.swift; path = Sources/HotKey/HotKeysController.swift; sourceTree = "<group>"; };
+		1B59DAA725A572CAB793F90810757182 /* CLSReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSReport.h; path = OSX/Crashlytics.framework/Versions/A/Headers/CLSReport.h; sourceTree = "<group>"; };
+		26E588EF2DBA6FDADDDE4C8EAD9A8398 /* HotKey-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HotKey-umbrella.h"; sourceTree = "<group>"; };
 		2C0C5FD3B4DBF1E42EBF1E6C1EAFD243 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		2D932BA03EC0EEBB5D784A0A1A430656 /* Key.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Key.swift; path = Sources/HotKey/Key.swift; sourceTree = "<group>"; };
+		340B38034E288648395EAC968C7B366A /* FABAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FABAttributes.h; path = OSX/Fabric.framework/Versions/A/Headers/FABAttributes.h; sourceTree = "<group>"; };
+		3BE1296D041223B5CCD8D7FF1B10E4D6 /* NSEventModifierFlags+HotKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSEventModifierFlags+HotKey.swift"; path = "Sources/HotKey/NSEventModifierFlags+HotKey.swift"; sourceTree = "<group>"; };
 		3F1EE9FE9DDAC1C2C484CC9B58B1150E /* Pods_ScratchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ScratchTests.framework; path = "Pods-ScratchTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		47298E4186CBB9ECB5F53374C1916E93 /* HotKey.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = HotKey.modulemap; sourceTree = "<group>"; };
-		47B4A203139225347191D79AC3C7AE07 /* HotKey-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HotKey-prefix.pch"; sourceTree = "<group>"; };
+		3F75A1764EDB09681F59B9C40789781C /* Fabric.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Fabric.h; path = OSX/Fabric.framework/Versions/A/Headers/Fabric.h; sourceTree = "<group>"; };
 		50B5E864786BF5761C3FBC8ABB737D9F /* Pods-ScratchTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ScratchTests-frameworks.sh"; sourceTree = "<group>"; };
 		51E721A067C31516D651D164C79F8E6C /* Pods-ScratchTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ScratchTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		5753B234B4938F3BC8ECFF958EF53FEF /* Pods-Scratch-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Scratch-frameworks.sh"; sourceTree = "<group>"; };
 		5923F7A9F874D1A0BDDE6D6A9E5560A5 /* Pods-Scratch-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Scratch-acknowledgements.plist"; sourceTree = "<group>"; };
 		5BFD4FA5060601FA949EB5C59F81849C /* Pods-Scratch-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Scratch-dummy.m"; sourceTree = "<group>"; };
+		5D0F0F18A7971F4C938FD37BF6EF078B /* CLSStackFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSStackFrame.h; path = OSX/Crashlytics.framework/Versions/A/Headers/CLSStackFrame.h; sourceTree = "<group>"; };
+		60354566887C6C4D6467E8EEB74363BF /* HotKey-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HotKey-prefix.pch"; sourceTree = "<group>"; };
 		60EBB4C83DD47FF9510B7C7786633F64 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Carbon.framework; sourceTree = DEVELOPER_DIR; };
-		78CAC9DABE04E0493AC7084B80B4FFEF /* HotKeysController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HotKeysController.swift; path = Sources/HotKey/HotKeysController.swift; sourceTree = "<group>"; };
+		704E7BBB2B1D2795794B130AD416A2EA /* Key.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Key.swift; path = Sources/HotKey/Key.swift; sourceTree = "<group>"; };
+		74A773732AE4AF2F72B18D3D2338B2E9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7551EB98900D8BBE53BFFAE7B1CF63A2 /* HotKey.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = HotKey.modulemap; sourceTree = "<group>"; };
+		7F033682948D9B47BCE37F48DB62D79B /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = OSX/Fabric.framework; sourceTree = "<group>"; };
+		826522F6E89CE9715BA7A8E174B767EE /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = OSX/Crashlytics.framework; sourceTree = "<group>"; };
 		849FA4DE6906BADDD3B9B2DA73EAC042 /* Pods-Scratch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Scratch.release.xcconfig"; sourceTree = "<group>"; };
+		8BC6AD2D9BA2AD45BC32F7E64D191662 /* KeyCombo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyCombo.swift; path = Sources/HotKey/KeyCombo.swift; sourceTree = "<group>"; };
 		8F2B2B31F9ADAA8ACF131CBA650041D0 /* Pods-Scratch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Scratch.debug.xcconfig"; sourceTree = "<group>"; };
 		8FE6C031B0B85089EFB34BE335C1E9F3 /* Pods-ScratchTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ScratchTests-umbrella.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9621159DE55700E5582BA41E325854B8 /* Pods-ScratchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ScratchTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D5BB43709697114F89A014FF1E46BBF /* Pods-ScratchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ScratchTests.release.xcconfig"; sourceTree = "<group>"; };
+		A48BD1D8F94AD60CE88FC167CD035042 /* CLSAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSAttributes.h; path = OSX/Crashlytics.framework/Versions/A/Headers/CLSAttributes.h; sourceTree = "<group>"; };
 		A8738B87A5DD9F0C0B1ABA07D37019B2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9AAF1410BF397F778EE0A1008CCE45E /* Pods-Scratch.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Scratch.modulemap"; sourceTree = "<group>"; };
-		AFDBFC39A102F89D13F7659FEB469FDD /* NSEventModifierFlags+HotKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSEventModifierFlags+HotKey.swift"; path = "Sources/HotKey/NSEventModifierFlags+HotKey.swift"; sourceTree = "<group>"; };
+		B41868E1D45BB9D393E71B19AE62DA4C /* CLSLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSLogging.h; path = OSX/Crashlytics.framework/Versions/A/Headers/CLSLogging.h; sourceTree = "<group>"; };
+		B7FCE9D6A1C35F06486D6094B7F23A35 /* Crashlytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Crashlytics.h; path = OSX/Crashlytics.framework/Versions/A/Headers/Crashlytics.h; sourceTree = "<group>"; };
+		B87E531670FE5F2CEDAEFFAE57A1A528 /* HotKey-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HotKey-dummy.m"; sourceTree = "<group>"; };
 		B9784F5F663ACDFF4F3C0536271C53A8 /* Pods-Scratch-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Scratch-umbrella.h"; sourceTree = "<group>"; };
-		C07CFD521DA671921D73AA482491B21C /* KeyCombo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyCombo.swift; path = Sources/HotKey/KeyCombo.swift; sourceTree = "<group>"; };
 		C8F73176125AD9296A245EDA92AFD042 /* Pods-Scratch-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Scratch-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E2C6A03B5DE40AB308AEEF961C94F9A8 /* Pods-ScratchTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ScratchTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E6CBE64C502A8AA45CCE99809EEB002C /* HotKey-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HotKey-dummy.m"; sourceTree = "<group>"; };
+		E6E21F9F8E4A3C8BFF4B9A9CF83B5AEF /* HotKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HotKey.swift; path = Sources/HotKey/HotKey.swift; sourceTree = "<group>"; };
 		ECBD9B7D7CD96CA8BBDA1F02B48D3E6B /* Pods_Scratch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Scratch.framework; path = "Pods-Scratch.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5E15B714AEE690F3EE615A79EB09011 /* HotKey-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HotKey-umbrella.h"; sourceTree = "<group>"; };
+		F4F85B3453746763B08C116B4FA4381E /* Answers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = OSX/Crashlytics.framework/Versions/A/Headers/Answers.h; sourceTree = "<group>"; };
 		F8C035145C822CCF7AB16AB4758080D4 /* Appkit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Appkit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Appkit.framework; sourceTree = DEVELOPER_DIR; };
 		FBA27E21966518C837E0793DB42EE8C0 /* Pods-ScratchTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ScratchTests.modulemap"; sourceTree = "<group>"; };
 		FCD44D6B4002FAB2A1BE9CD01F2CF46D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -124,32 +135,53 @@
 			path = "Target Support Files/Pods-ScratchTests";
 			sourceTree = "<group>";
 		};
-		0E116347C58A0922E9CADD61E595BF01 /* HotKey */ = {
+		0D15F3C9BFA18316A2F3C4E60631758A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				26934BD6BC0B65D4E808B922A0F1E543 /* HotKey.swift */,
-				78CAC9DABE04E0493AC7084B80B4FFEF /* HotKeysController.swift */,
-				2D932BA03EC0EEBB5D784A0A1A430656 /* Key.swift */,
-				C07CFD521DA671921D73AA482491B21C /* KeyCombo.swift */,
-				AFDBFC39A102F89D13F7659FEB469FDD /* NSEventModifierFlags+HotKey.swift */,
-				4A7F4D7F94B962D12187A8BC45F18E28 /* Support Files */,
+				7551EB98900D8BBE53BFFAE7B1CF63A2 /* HotKey.modulemap */,
+				0DA862B883F924269A059D1EA5AE037A /* HotKey.xcconfig */,
+				B87E531670FE5F2CEDAEFFAE57A1A528 /* HotKey-dummy.m */,
+				60354566887C6C4D6467E8EEB74363BF /* HotKey-prefix.pch */,
+				26E588EF2DBA6FDADDDE4C8EAD9A8398 /* HotKey-umbrella.h */,
+				74A773732AE4AF2F72B18D3D2338B2E9 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HotKey";
+			sourceTree = "<group>";
+		};
+		3BED7F9E2AC23EE7D626ACE95F0E5D2F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				72F002B7CA8BCBC102129609F30AB430 /* Crashlytics */,
+				5AA9A2AC3C1C3DAC2C9B28560F25EAB8 /* Fabric */,
+				54331C1A67C759D7218B549F27BB257C /* HotKey */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		54331C1A67C759D7218B549F27BB257C /* HotKey */ = {
+			isa = PBXGroup;
+			children = (
+				E6E21F9F8E4A3C8BFF4B9A9CF83B5AEF /* HotKey.swift */,
+				15F92D417497547F3DC5C09B54477C37 /* HotKeysController.swift */,
+				704E7BBB2B1D2795794B130AD416A2EA /* Key.swift */,
+				8BC6AD2D9BA2AD45BC32F7E64D191662 /* KeyCombo.swift */,
+				3BE1296D041223B5CCD8D7FF1B10E4D6 /* NSEventModifierFlags+HotKey.swift */,
+				0D15F3C9BFA18316A2F3C4E60631758A /* Support Files */,
 			);
 			name = HotKey;
 			path = HotKey;
 			sourceTree = "<group>";
 		};
-		4A7F4D7F94B962D12187A8BC45F18E28 /* Support Files */ = {
+		5AA9A2AC3C1C3DAC2C9B28560F25EAB8 /* Fabric */ = {
 			isa = PBXGroup;
 			children = (
-				47298E4186CBB9ECB5F53374C1916E93 /* HotKey.modulemap */,
-				1C477D06E8966A43AD82A480A99C7314 /* HotKey.xcconfig */,
-				E6CBE64C502A8AA45CCE99809EEB002C /* HotKey-dummy.m */,
-				47B4A203139225347191D79AC3C7AE07 /* HotKey-prefix.pch */,
-				F5E15B714AEE690F3EE615A79EB09011 /* HotKey-umbrella.h */,
-				0759573E7B674B9334520C909AA90EF4 /* Info.plist */,
+				340B38034E288648395EAC968C7B366A /* FABAttributes.h */,
+				3F75A1764EDB09681F59B9C40789781C /* Fabric.h */,
+				70CBF8528DA19FE394D29D6A3D02E744 /* Frameworks */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/HotKey";
+			name = Fabric;
+			path = Fabric;
 			sourceTree = "<group>";
 		};
 		64ACD6C67B4771EEFD1C13EA25961336 /* OS X */ = {
@@ -162,23 +194,47 @@
 			name = "OS X";
 			sourceTree = "<group>";
 		};
+		6F8989B3AB15331498668345B4917FE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				826522F6E89CE9715BA7A8E174B767EE /* Crashlytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70CBF8528DA19FE394D29D6A3D02E744 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F033682948D9B47BCE37F48DB62D79B /* Fabric.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72F002B7CA8BCBC102129609F30AB430 /* Crashlytics */ = {
+			isa = PBXGroup;
+			children = (
+				13552B95BEB6CAB2EA2DB3DA8254B1EF /* ANSCompatibility.h */,
+				F4F85B3453746763B08C116B4FA4381E /* Answers.h */,
+				A48BD1D8F94AD60CE88FC167CD035042 /* CLSAttributes.h */,
+				B41868E1D45BB9D393E71B19AE62DA4C /* CLSLogging.h */,
+				1B59DAA725A572CAB793F90810757182 /* CLSReport.h */,
+				5D0F0F18A7971F4C938FD37BF6EF078B /* CLSStackFrame.h */,
+				B7FCE9D6A1C35F06486D6094B7F23A35 /* Crashlytics.h */,
+				6F8989B3AB15331498668345B4917FE5 /* Frameworks */,
+			);
+			name = Crashlytics;
+			path = Crashlytics;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				96D996393384F21972E2DD81788EE22C /* Frameworks */,
-				95F84480F812638CE6FA53D39E7937B9 /* Pods */,
+				3BED7F9E2AC23EE7D626ACE95F0E5D2F /* Pods */,
 				AA645883D9AB10EF6EF190FA636EB2B7 /* Products */,
 				F5B4CA6D4F166DF3821EAE25D74B321E /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		95F84480F812638CE6FA53D39E7937B9 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0E116347C58A0922E9CADD61E595BF01 /* HotKey */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		96D996393384F21972E2DD81788EE22C /* Frameworks */ = {
@@ -570,7 +626,7 @@
 		};
 		D45E0AA8A4C56D9C6F995D5A47BB7C48 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C477D06E8966A43AD82A480A99C7314 /* HotKey.xcconfig */;
+			baseConfigurationReference = 0DA862B883F924269A059D1EA5AE037A /* HotKey.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -602,7 +658,7 @@
 		};
 		D680304EAFD718DF5DCFF75F1BEAB028 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C477D06E8966A43AD82A480A99C7314 /* HotKey.xcconfig */;
+			baseConfigurationReference = 0DA862B883F924269A059D1EA5AE037A /* HotKey.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

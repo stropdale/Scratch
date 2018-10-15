@@ -6,6 +6,8 @@ target 'Scratch' do
   use_frameworks!
   
   pod 'HotKey'
+  pod 'Fabric'
+  pod 'Crashlytics'
 
   # Pods for Scratch
 
