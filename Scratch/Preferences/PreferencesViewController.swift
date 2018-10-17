@@ -13,11 +13,22 @@ class PreferencesViewController: NSViewController {
     //@IBOutlet private weak var syncUsingCloudCheck: NSButton!
     @IBOutlet private weak var useMonoSpaceCheck: NSButton!
     @IBOutlet private weak var allowRichTextCheck: NSButton!
+    @IBOutlet weak var versionLabel: NSTextField!
     
     
     override func viewWillAppear() {
         super.viewWillAppear()
         loadPreferences()
+        setVersionAndBuild()
+    }
+    
+    private func setVersionAndBuild() {
+        guard let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String, let buildNumber = Bundle.main.infoDictionary!["CFBundleVersion"] as? String else {
+            versionLabel.stringValue = ""
+            return
+        }
+        
+        versionLabel.stringValue = "Scratch v" + appVersion + "/" + buildNumber
     }
  
     private func loadPreferences() {

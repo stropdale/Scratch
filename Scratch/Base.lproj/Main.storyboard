@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
-        <capability name="box content view" minToolsVersion="7.0"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -783,10 +783,11 @@
                                                     <textView importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="bar" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dataDetection="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="OfP-jc-jUv" userLabel="TextViiew">
                                                         <rect key="frame" x="0.0" y="0.0" width="456" height="396"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="calibratedWhite"/>
                                                         <size key="minSize" width="456" height="396"/>
                                                         <size key="maxSize" width="464" height="10000000"/>
-                                                        <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                     </textView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -851,7 +852,7 @@
         <scene sceneID="WX9-y6-Mqm">
             <objects>
                 <windowController storyboardIdentifier="PreferencesWindowController" id="dqe-at-k7O" customClass="PreferencesWindowController" customModule="Scratch" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="vvO-Qu-80R">
+                    <window key="window" title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="vvO-Qu-80R">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="245" y="301" width="480" height="270"/>
@@ -874,11 +875,11 @@
                 <customObject id="kcd-g7-fSX" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController title="Preferences" storyboardIdentifier="PreferencesViewController" id="syf-mh-xmZ" customClass="PreferencesViewController" customModule="Scratch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="day-8c-vkf">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="146"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="171"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sy4-H8-ekq">
-                                <rect key="frame" x="18" y="110" width="148" height="18"/>
+                                <rect key="frame" x="18" y="135" width="148" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Use monospace font" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="ZYw-UI-dGA">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -889,7 +890,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fsz-CZ-4jy">
-                                <rect key="frame" x="18" y="90" width="114" height="18"/>
+                                <rect key="frame" x="18" y="115" width="114" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Allow Rich Text" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Qq0-bP-hbp">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -900,7 +901,7 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NXf-H8-mch">
-                                <rect key="frame" x="18" y="20" width="301" height="17"/>
+                                <rect key="frame" x="18" y="45" width="301" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Keyboard shortcut: Control, Option, Command, S" id="rmF-bv-nBZ">
                                     <font key="font" metaFont="system"/>
@@ -908,15 +909,29 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OjD-YM-Ru0">
+                                <rect key="frame" x="6" y="8" width="388" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Version" id="Ywd-lD-xQS">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="OjD-YM-Ru0" firstAttribute="leading" secondItem="day-8c-vkf" secondAttribute="leading" constant="8" id="MAz-5g-265"/>
+                            <constraint firstAttribute="bottom" secondItem="OjD-YM-Ru0" secondAttribute="bottom" constant="8" id="XyF-uj-abP"/>
+                            <constraint firstAttribute="trailing" secondItem="OjD-YM-Ru0" secondAttribute="trailing" constant="8" id="sIK-hx-nAo"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="allowRichTextCheck" destination="Fsz-CZ-4jy" id="DgM-OV-5g8"/>
                         <outlet property="useMonoSpaceCheck" destination="sy4-H8-ekq" id="jl7-Vz-9VC"/>
+                        <outlet property="versionLabel" destination="OjD-YM-Ru0" id="OZM-GD-bsE"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1301" y="488"/>
+            <point key="canvasLocation" x="1301" y="500.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="71O-Mc-2YW">
@@ -935,7 +950,7 @@
     <resources>
         <image name="clear document" width="24" height="28"/>
         <image name="copy" width="26" height="26"/>
-        <image name="settings" width="128" height="128"/>
+        <image name="settings" width="256" height="256"/>
         <image name="share" width="16" height="22"/>
     </resources>
 </document>
