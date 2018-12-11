@@ -792,11 +792,11 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </clipView>
-                                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" arrowsPosition="none" doubleValue="1" horizontal="YES" id="i3v-c4-BZ4">
+                                            <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" arrowsPosition="none" doubleValue="1" horizontal="YES" id="i3v-c4-BZ4">
                                                 <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
-                                            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="9us-nS-7Ub">
+                                            <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="9us-nS-7Ub">
                                                 <rect key="frame" x="445" y="0.0" width="15" height="250"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
@@ -901,10 +901,10 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NXf-H8-mch">
-                                <rect key="frame" x="18" y="45" width="301" height="17"/>
+                                <rect key="frame" x="18" y="76" width="123" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Keyboard shortcut: Control, Option, Command, S" id="rmF-bv-nBZ">
-                                    <font key="font" metaFont="system"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Keyboard shortcut:" id="rmF-bv-nBZ">
+                                    <font key="font" size="13" name="HelveticaNeue-Bold"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -917,6 +917,39 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q9R-fQ-4iJ">
+                                <rect key="frame" x="18" y="52" width="67" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Control" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="TDH-1F-hfe">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hcR-Il-AiC">
+                                <rect key="frame" x="99" y="52" width="63" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Option" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="phS-Hj-HKj">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rna-Zb-adY">
+                                <rect key="frame" x="169" y="52" width="84" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Command" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="iN4-vI-GJB">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uxP-2E-0qd">
+                                <rect key="frame" x="259" y="50" width="96" height="22"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" placeholderString="Key" drawsBackground="YES" id="isD-Bw-URm">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="OjD-YM-Ru0" firstAttribute="leading" secondItem="day-8c-vkf" secondAttribute="leading" constant="8" id="MAz-5g-265"/>
@@ -926,6 +959,10 @@
                     </view>
                     <connections>
                         <outlet property="allowRichTextCheck" destination="Fsz-CZ-4jy" id="DgM-OV-5g8"/>
+                        <outlet property="command" destination="rna-Zb-adY" id="F47-En-19Y"/>
+                        <outlet property="control" destination="q9R-fQ-4iJ" id="9Vn-6c-Jk2"/>
+                        <outlet property="keyField" destination="uxP-2E-0qd" id="wLa-Ff-63G"/>
+                        <outlet property="option" destination="hcR-Il-AiC" id="Hj4-H0-ZqR"/>
                         <outlet property="useMonoSpaceCheck" destination="sy4-H8-ekq" id="jl7-Vz-9VC"/>
                         <outlet property="versionLabel" destination="OjD-YM-Ru0" id="OZM-GD-bsE"/>
                     </connections>

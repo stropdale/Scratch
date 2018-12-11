@@ -18,7 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength)
     let popover = NSPopover()
     var eventMonitor: EventMonitor?
-    let hotKey = HotKey(key: .s, modifiers: [.control, .option, .command]) // Setup hot key for ⌥⌘S
+    var hotKey = HotKeyManager.getShowHotKeyCombo().getHotKey
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         UserDefaults.standard.register(defaults: ["NSApplicationCrashOnExceptions": true])
@@ -29,6 +29,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         setupClickEventMonitor()
         
         // Monitor for hotkey use
+        updateShowKeyComboHandler()
+       
+    }
+    
+    public func updateShowKeyComboHandler() {
+        hotKey = HotKeyManager.getShowHotKeyCombo().getHotKey
+        
         hotKey.keyDownHandler = {
             self.togglePopover(self)
         }

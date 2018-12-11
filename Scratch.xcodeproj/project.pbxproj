@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6D0B622DBC0D9D991C1B8586 /* Pods_ScratchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB683CC4D15E07E8536B177 /* Pods_ScratchTests.framework */; };
 		CC9E3881307276BBCB88942D /* Pods_Scratch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7833CA0DF4E07474259493 /* Pods_Scratch.framework */; };
+		E401408F21AA913E00868370 /* HotKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E401408E21AA913E00868370 /* HotKeyManager.swift */; };
 		E4556D14202261AC00B5813C /* Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4556D13202261AC00B5813C /* Names.swift */; };
 		E4556D162022658E00B5813C /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4556D152022658E00B5813C /* PreferencesWindowController.swift */; };
 		E4556D18202267D700B5813C /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4556D17202267D700B5813C /* PreferencesViewController.swift */; };
@@ -39,6 +40,7 @@
 		3D7833CA0DF4E07474259493 /* Pods_Scratch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scratch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		692EA5E1EC56D07FCF923C06 /* Pods-Scratch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scratch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scratch/Pods-Scratch.debug.xcconfig"; sourceTree = "<group>"; };
 		87DEE369BB9B5B68659E2198 /* Pods-ScratchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScratchTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScratchTests/Pods-ScratchTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E401408E21AA913E00868370 /* HotKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HotKeyManager.swift; path = Preferences/HotKeyManager.swift; sourceTree = "<group>"; };
 		E4556D13202261AC00B5813C /* Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Names.swift; sourceTree = "<group>"; };
 		E4556D152022658E00B5813C /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
 		E4556D17202267D700B5813C /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				E4B831EA201D70D500A5A375 /* EventMonitor.swift */,
 				E4ABE913202117E40031A2B4 /* DocumentPerisistanceManager.swift */,
 				E4556D13202261AC00B5813C /* Names.swift */,
+				E401408E21AA913E00868370 /* HotKeyManager.swift */,
 			);
 			path = Scratch;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				E4E10D98201A7E720082D0BA /* AppDelegate.swift in Sources */,
 				E4B831E9201D6ECB00A5A375 /* CurrentNoteViewController.swift in Sources */,
 				E4556D18202267D700B5813C /* PreferencesViewController.swift in Sources */,
+				E401408F21AA913E00868370 /* HotKeyManager.swift in Sources */,
 				E4556D1D202278A400B5813C /* FormattingViewController.swift in Sources */,
 				E4FDB74120249F060089FA76 /* PreferencesModel.swift in Sources */,
 				E4B831EB201D70D500A5A375 /* EventMonitor.swift in Sources */,

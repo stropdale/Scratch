@@ -15,11 +15,23 @@ class PreferencesViewController: NSViewController {
     @IBOutlet private weak var allowRichTextCheck: NSButton!
     @IBOutlet weak var versionLabel: NSTextField!
     
+    // KeyboardShort Cut
+    @IBOutlet weak var control: NSButton!
+    @IBOutlet weak var option: NSButton!
+    @IBOutlet weak var command: NSButton!
+    @IBOutlet weak var keyField: NSTextField!
+    
     
     override func viewWillAppear() {
         super.viewWillAppear()
         loadPreferences()
         setVersionAndBuild()
+    }
+    
+    override func viewWillDisappear() {
+        super.viewWillDisappear()
+        
+        saveShowKeyCombo()
     }
     
     private func setVersionAndBuild() {
@@ -35,6 +47,27 @@ class PreferencesViewController: NSViewController {
         //syncUsingCloudCheck.state = PreferencesModel.syncUsingiCloud ? .on : .off
         useMonoSpaceCheck.state = PreferencesModel.useMonoSpace ? .on : .off
         allowRichTextCheck.state = PreferencesModel.useRichText ? .on : .off
+        loadShowHotkeyCombo()
+    }
+    
+    private func loadShowHotkeyCombo() {
+        let hotkey = HotKeyManager.getShowHotKeyCombo()
+        
+        control.state = hotkey.isCtrl ? .on : .off
+        option.state = hotkey.isOption ? .on : .off
+        command.state = hotkey.isCmd ? .on : .off
+        
+        keyField.stringValue = hotkey.key
+    }
+    
+    private func saveShowKeyCombo() {
+        let combo = KeyCombo()
+        combo.key = keyField.stringValue
+        combo.isCtrl = control.state == .on ? true : false
+        combo.isCmd = command.state == .on ? true : false
+        combo.isOption = option.state == .on ? true : false
+        
+        HotKeyManager.setShowHotKeyCombo(keyCombo: combo)
     }
     
 //    @IBAction func CloudSettingChanged(_ sender: NSButton) {
