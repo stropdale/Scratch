@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'CD7CA7613D1AE9B77775DCDC34F87472'
-               BlueprintName = 'HotKey'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'HotKey.framework'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9C36B47346F672096EB78045242C8C3B"
+               BlueprintName = "HotKey"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "HotKey.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
