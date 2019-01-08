@@ -8,6 +8,8 @@
 
 import Cocoa
 
+// TODO: Need to validate the key combo entries
+
 class PreferencesViewController: NSViewController {
 
     //@IBOutlet private weak var syncUsingCloudCheck: NSButton!
@@ -61,6 +63,13 @@ class PreferencesViewController: NSViewController {
     }
     
     private func saveShowKeyCombo() {
+        if keyField.stringValue.isEmpty {
+            return
+        }
+        else if control.state == .off && command.state == .off && option.state == .off {
+            return
+        }
+        
         let combo = KeyCombo()
         combo.key = keyField.stringValue
         combo.isCtrl = control.state == .on ? true : false
@@ -76,14 +85,21 @@ class PreferencesViewController: NSViewController {
 //    }
     
     @IBAction func monoSpaceSettingChanged(_ sender: NSButton) {
-        print("Mono")
         PreferencesModel.useMonoSpace = sender.state == .on ? true : false
     }
     
     @IBAction func richTextSettingChanged(_ sender: NSButton) {
-        print("Rich")
         PreferencesModel.useRichText = sender.state == .on ? true : false
     }
-    
-    
+}
+
+extension PreferencesViewController: NSTextFieldDelegate {
+    override func controlTextDidChange(_ obj: Notification) {
+        keyField.stringValue = keyField.stringValue.lowercased()
+        
+        if keyField.stringValue.count > 1 {
+            let firstChar = keyField.stringValue.prefix(1)
+            keyField.stringValue = String(firstChar)
+        }
+    }
 }

@@ -74,7 +74,8 @@ class KeyCombo: NSObject, NSCoding {
                 key = "s"
             }
             
-            let keyValue = Key(string: key)
+            let firstChar = key.prefix(1)
+            let keyValue = Key(string: String(firstChar))
             var modiferFlags: NSEvent.ModifierFlags = []
             
             if isCmd {
@@ -86,7 +87,6 @@ class KeyCombo: NSObject, NSCoding {
             if isOption {
                 modiferFlags.insert(NSEvent.ModifierFlags.option)
             }
-            
             
             let hotKey = HotKey(key: keyValue!, modifiers: modiferFlags)
             return hotKey
